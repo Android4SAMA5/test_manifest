@@ -1,0 +1,18 @@
+Android4SAMA5 Git Server
+
+Welcome to the git server of Android4SAM for SamA5D2x.
+
+The manifest project is loated at: sama5d2_manifest. 
+
+Once you setup your build environment correctly, you could build it via:
+
+$ mkdir android4sam && cd android4sam
+$ repo init -u git://github.com/Android4SAMA5/sama5d2_manifest.git -b <branch_name>
+$ repo sync
+$ source build/envsetup.sh
+$ lunch sama5d2-eng
+$ make -j4
+
+Please visit Android4SAM for binary demo for SamA5D2x and step by step guide for building the demo from source code.
+
+If you have any suggestions and/or comments, please don't be hesitate to contact us.
