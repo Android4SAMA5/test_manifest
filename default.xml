@@ -11,7 +11,6 @@
 
   <project path="device/atmel" name="device_atmel" remote="github" revision="android4sam_v4.4w_r1" groups="device,atmel" />
   <project path="hardware/atmel" name="platform_hardware_atmel" remote="github" revision="android4sam_v4.4w_r1" groups="atmel" />
-  <project path="hardware/libhardware_legacy" name="platform_hardware_libhardware_legacy" remote="github" revision="android4sam_v4.4w_r1" groups="pdk" />
 
   <project path="build" name="platform/build" groups="pdk" >
     <copyfile src="core/root.mk" dest="Makefile" />
