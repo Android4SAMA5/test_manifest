@@ -2,9 +2,11 @@
 <manifest>
 
   <remote  name="aosp"
-           fetch=".." />
+	   fetch="https://android.googlesource.com/" />
+
   <remote  name="github"
            fetch="https://github.com/Android4SAM/" />
+
   <default revision="refs/tags/android-4.4w_r1"
            remote="aosp"
            sync-j="4" />
