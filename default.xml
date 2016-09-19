@@ -7,16 +7,35 @@
   <remote  name="github"
            fetch="https://github.com/Android4SAMA5/" /> 
 
+  <remote name="github4sam"
+           fetch="https://github.com/Android4SAM/" />
+
+  <remote name="linaro"
+           fetch="https://git.linaro.org/people/benjamin.gaignard/" />
+
   <default revision="refs/tags/android-4.4w_r1"
            remote="aosp"
            sync-j="4" />
 
   <project path="device/atmel" name="device_atmel" remote="github" revision="android-4.4w_r1" groups="device,atmel" />
   <project path="hardware/atmel" name="hardware_atmel" remote="github" revision="android-4.4w_r1" groups="atmel" />
-  <project path="build" name="build" remote="github" revision="android-4.4w_r1" groups="atmel" >
+  <project path="frameworks/base" name="platform_frameworks_base" remote="github4sam" revision="android4sam_v4.4w_r1" groups="atmel" />
+  <project path="packages/apps/Calibrate" name="platform_packages_apps_Calibrate" remote="github4sam" revision="android4sam_v4.4w_r1" />
+  <project path="packages/apps/Ethernet" name="platform_packages_apps_Ethernet" remote="github4sam" revision="android4sam_v4.4w_r1" />
+  <project path="packages/apps/AtmelLogo" name="platform_packages_apps_AtmelLogo" remote="github4sam" revision="android4sam_v4.4w_r1" />
+  <!-- <project path="packages/apps/LegacyCamera" name="platform_packages_apps_LegacyCamera" remote="github4sam" revision="android4sam_v4.4w_r1" /> -->
+  <project path="external/tinyalsa" name="external_tinyalsa" remote="github4sam" revision="android4sam_v4.4w_r1" groups="pdk" />
+  <project path="external/wpa_supplicant_8" name="platform_external_wpa_supplicant_8" remote="github4sam" revision="android4sam_v4.4w_r1" groups="pdk" />
+  <project path="external/jpeg" name="platform_external_jpeg" remote="github4sam" revision="android4sam_v4.4w_r1" groups="pdk" />
+  <project path="external/skia" name="platform_external_skia" remote="github4sam" revision="android4sam_v4.4w_r1" groups="pdk" />
+  <project path="external/drm" name="libdrm" remote="linaro" revision="android-4.4.3" groups="pdk" />
+  <project path="hardware/libhardware_legacy" name="platform_hardware_libhardware_legacy" remote="github4sam" revision="android4sam_v4.4w_r1" groups="pdk" />
+
+
+  <project path="build" name="build" remote="github" revision="android-4.4w_r1" groups="pdk" >
     <copyfile src="core/root.mk" dest="Makefile" />
   </project>
-  <project path="bionic" name="bionic" remote="github" revision="android-4.4w_r1" groups="atmel" />
+  <project path="bionic" name="bionic" remote="github" revision="android-4.4w_r1" groups="pdk" />
 
 <!--  <project path="build" name="platform/build" groups="pdk" >
     <copyfile src="core/root.mk" dest="Makefile" />
